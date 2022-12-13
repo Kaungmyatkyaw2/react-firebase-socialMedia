@@ -41,10 +41,10 @@ const PostCard = ({post}) => {
        
     }
 
-    const handleDeleteComment = async (time) => {
-        if (id === post.authorId) {
+    const handleDeleteComment = async (comment) => {
+        if (id === comment.userId) {
             updateDoc(doc(db,'posts',post.id),{
-                comment : post.comment.filter(i => i.created !== time)
+                comment : post.comment.filter(i => i.created !== comment?.created)
             }).then(res => console.log(res)).catch(error => console.log(error))   
         }else{
             toast.error("You don't have access")
@@ -100,7 +100,7 @@ const PostCard = ({post}) => {
                                                 <img className="rounded-btn object-cover" src={i.profilePhoto} alt="" />
                                                 <span className="text-[14px] font-bold">{i.displayName}</span>
                                             </div>
-                                            <div className="text-red-500 cursor-pointer" onClick={handleDeleteComment.bind(null,i.created)}>
+                                            <div className="text-red-500 cursor-pointer" onClick={handleDeleteComment.bind(null,i)}>
                                                 <AiOutlineDelete/>
                                             </div>
                                         </div>
