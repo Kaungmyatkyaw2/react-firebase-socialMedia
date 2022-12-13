@@ -54,7 +54,12 @@ const Navbar = () => {
             <div className='rounded-btn'>
                 <IoMdNotifications className='text-[21px] rotate-[5deg]' /> 
             </div>
-            <img onClick={handleLogout} className='rounded-btn object-cover' src={userInfo?.photoUrl} alt="" />
+            <NavLink to={`/main/profile/${userInfo.id}`} className='rounded-btn relative group'>
+            <img className='rounded-btn object-cover' src={userInfo?.photoUrl} alt="" />
+            <ul onClick={handleLogout} className='hidden group-hover:block absolute bottom-0 hover:bg-gray-50 translate-y-[100%] left-[-100%] bg-white text-[15px] shadow-lg px-[20px] py-[10px]'>
+                <li>Logout</li>
+            </ul>
+            </NavLink>
         </div>
     </div>
   )

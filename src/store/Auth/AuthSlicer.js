@@ -4,7 +4,7 @@ const initialState = {
     user : null,
     posts : [],
     userId : null,
-    isLoadAuth : false
+    isLoadAuth : true
 }
 
 const AuthSlicer = createSlice({

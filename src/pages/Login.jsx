@@ -33,8 +33,8 @@ const Login = () => {
   }
 
   return (
-    <div className='w-full h-[100vh] flex justify-center items-center'>
-        <form ref={form} onSubmit={handleSubmit} className='w-[350px] space-y-[20px] bg-white px-[30px] py-[30px] rounded-[10px] shadow-md'>
+    <div className='w-full h-[100vh] flex justify-center items-center bg-img'>
+        <form ref={form} onSubmit={handleSubmit} className='w-[350px] space-y-[20px] bg-blur px-[30px] py-[30px] rounded-[10px] shadow-md'>
             <h1 className='font-pop font-bold text-[20px] text-center'>Log In</h1>
             <input type="email" name='email' className='border border-gray-400 font-pop outline-none px-[10px] py-[10px] text-[13px] w-full' placeholder='Email Address'/>
             <input type="password" name='password' className='border border-gray-400 font-pop outline-none px-[10px] py-[10px] text-[13px] w-full' placeholder='Password'/>

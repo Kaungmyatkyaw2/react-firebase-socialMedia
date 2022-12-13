@@ -50,9 +50,6 @@ const App = () => {
 
     return unsub
     }
-
-    
-
   },[id])
 
   if (load) {

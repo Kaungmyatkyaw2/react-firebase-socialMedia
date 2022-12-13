@@ -42,9 +42,13 @@ const PostCard = ({post}) => {
     }
 
     const handleDeleteComment = async (time) => {
+        if (id === post.authorId) {
             updateDoc(doc(db,'posts',post.id),{
                 comment : post.comment.filter(i => i.created !== time)
-            }).then(res => console.log(res)).catch(error => console.log(error))
+            }).then(res => console.log(res)).catch(error => console.log(error))   
+        }else{
+            toast.error("You don't have access")
+        }
     }
 
   return (
