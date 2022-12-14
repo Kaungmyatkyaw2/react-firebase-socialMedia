@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #F0F2F5;
+body {
+  background-color: #f0f2f5;
 }
 
-.active{
-    @apply text-primary
+.active {
+  @apply text-primary;
 }
 
-.toCenter{
-    @apply flex justify-center items-center
+.toCenter {
+  @apply flex justify-center items-center;
 }
 
-.rounded-btn{
-    @apply w-[40px] h-[40px] rounded-full toCenter bg-gray-200 cursor-pointer
+.rounded-btn {
+  @apply w-[40px] h-[40px] rounded-full toCenter bg-gray-200 cursor-pointer;
 }
 
-.hideScroll::-webkit-scrollbar{
-    display: none;
+.hideScroll::-webkit-scrollbar {
+  display: none;
 }
 
-.bg-img{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c96 C 57.6%2c123.2 172.8%2c235.8 288%2c232 C 403.2%2c228.2 460.8%2c94 576%2c77 C 691.2%2c60 748.8%2c155.2 864%2c147 C 979.2%2c138.8 1036.8%2c11.6 1152%2c36 C 1267.2%2c60.4 1382.4%2c222.4 1440%2c269L1440 560L0 560z' fill='rgba(124%2c 178%2c 234%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c372 C 96%2c395.8 288%2c488.8 480%2c491 C 672%2c493.2 768%2c391.4 960%2c383 C 1152%2c374.6 1344%2c435.8 1440%2c449L1440 560L0 560z' fill='rgba(45%2c 138%2c 238%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
-    background-size: cover;
+.bg-img {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1004%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c96 C 57.6%2c123.2 172.8%2c235.8 288%2c232 C 403.2%2c228.2 460.8%2c94 576%2c77 C 691.2%2c60 748.8%2c155.2 864%2c147 C 979.2%2c138.8 1036.8%2c11.6 1152%2c36 C 1267.2%2c60.4 1382.4%2c222.4 1440%2c269L1440 560L0 560z' fill='rgba(124%2c 178%2c 234%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c372 C 96%2c395.8 288%2c488.8 480%2c491 C 672%2c493.2 768%2c391.4 960%2c383 C 1152%2c374.6 1344%2c435.8 1440%2c449L1440 560L0 560z' fill='rgba(45%2c 138%2c 238%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1004'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
 }
 
-.bg-blur{
-    background-color: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(20px);
+.bg-blur {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(20px);
 }
