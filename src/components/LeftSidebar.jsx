@@ -1,12 +1,13 @@
 import { FaUserFriends } from "react-icons/fa";
 import { BsBookmarkFill } from "react-icons/bs";
-import { AiFillFlag } from "react-icons/ai";
+import { AiFillHome } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
-import { IoPeopleCircleSharp } from "react-icons/io5";
-import { MdOndemandVideo } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { toggleLeftSide } from "../store/useraction/UserActionSlicer";
+import { MdOndemandVideo } from "react-icons/md";
+import { RiGroup2Line } from "react-icons/ri";
+import { SiFacebookgaming } from "react-icons/si";
 
 const LeftSidebar = () => {
   const user = useSelector((state) => state.auth.user);
@@ -16,14 +17,35 @@ const LeftSidebar = () => {
 
   const icon = [
     {
-      icon: <FaUserFriends />,
-      title: "Friends",
+      icon: <AiFillHome />,
+      title: "Home",
+      path: "/main",
       color: "text-[#1773E7]",
     },
     {
-      icon: <BsBookmarkFill />,
-      title: "Saved",
+      icon: <FaUserFriends />,
+      title: "Friends",
+      path: "/no",
       color: "text-[#8138CE]",
+    },
+    {
+      icon: <MdOndemandVideo />,
+      title: "Videos",
+      path: "/no",
+      color: "text-[#FF4500]",
+    },
+    ,
+    {
+      icon: <RiGroup2Line />,
+      title: "Groups",
+      path: "/no",
+      color: "text-blue-700",
+    },
+    {
+      icon: <SiFacebookgaming />,
+      title: "Gamings",
+      path: "no",
+      color: "text-blue-700",
     },
   ];
 
@@ -50,7 +72,9 @@ const LeftSidebar = () => {
         </div>
 
         {icon.map((i, index) => (
-          <div
+          <NavLink
+            to={i.path}
+            end
             onClick={() => dispatch(toggleLeftSide())}
             key={index}
             className="flex items-center space-x-[10px] hover:bg-gray-200 py-[10px] px-[10px] rounded-[5px] cursor-pointer"
@@ -61,15 +85,8 @@ const LeftSidebar = () => {
               {i.icon}
             </div>
             <p className="text-[14px] tracking-wide">{i.title}</p>
-          </div>
+          </NavLink>
         ))}
-
-        <div className="flex items-center space-x-[10px] hover:bg-gray-200 py-[10px] px-[10px] rounded-[5px] cursor-pointer">
-          <div className="w-[30px] h-[30px] bg-gray-300 rounded-full flex justify-center items-center">
-            <BiChevronDown className="text-[24px]" />
-          </div>
-          <p className="text-[14px] tracking-wide">See more</p>
-        </div>
       </div>
     </div>
   );

@@ -32,7 +32,8 @@ const CreatePost = () => {
                     authorId : user?.id,
                     authorImage : user?.photoUrl,
                     comment : [],
-                    created : serverTimestamp()
+                    created : serverTimestamp(),
+                    create_time : `${new Date().getFullYear()} - ${new Date().getMonth()} - ${new Date().getDate()}`
                 }
                 )
                 toast.success("Posted Successfully")
